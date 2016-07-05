@@ -1,4 +1,4 @@
-package designmode.strategy;
+package strategy;
 
 import designmode.tools.ALog;
 

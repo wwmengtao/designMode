@@ -1,4 +1,4 @@
-package designmode.strategy;
+package strategy;
 
 public class strategyTest {
 	public static void main(String []args){

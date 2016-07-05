@@ -1,13 +1,13 @@
-package designmode.strategy;
+package strategy;
 
 import designmode.tools.ALog;
 
-public class MuteQuack implements Quackhaviour{
+public class Quack implements Quackhaviour{
 
 	@Override
 	public void Quack() {
 		// TODO Auto-generated method stub
-		ALog.Log("Silent");
+		ALog.Log("Quack");
 	}
 
 }

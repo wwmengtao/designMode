@@ -1,4 +1,4 @@
-package designmode.strategy;
+package strategy;
 
 public interface FlyBehaviour {
 	public void fly();

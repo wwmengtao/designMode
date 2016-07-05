@@ -1,4 +1,4 @@
-package designmode.strategy;
+package strategy;
 
 public abstract class duck {
 	
