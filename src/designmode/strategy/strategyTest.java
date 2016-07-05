@@ -1,6 +1,6 @@
 package designmode.strategy;
 
-public class duckTest {
+public class strategyTest {
 	public static void main(String []args){
 		GreenDuck mGreenDuck = new GreenDuck();
 		mGreenDuck.display();
