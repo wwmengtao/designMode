@@ -1,4 +1,4 @@
-package com.mt.designmode.strategy;
+package designmode.strategy;
 
 public class duckTest {
 	public static void main(String []args){

@@ -1,4 +1,4 @@
-package com.mt.designmode.tools;
+package designmode.tools;
 
 
 public class ALog {

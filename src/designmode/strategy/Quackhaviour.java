@@ -1,4 +1,4 @@
-package com.mt.designmode.strategy;
+package designmode.strategy;
 
 public interface Quackhaviour {
 	public void Quack();

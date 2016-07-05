@@ -1,6 +1,6 @@
-package com.mt.designmode.strategy;
+package designmode.strategy;
 
-import com.mt.designmode.tools.ALog;
+import designmode.tools.ALog;
 
 public class MuteQuack implements Quackhaviour{
 
