@@ -1,6 +1,16 @@
 package factory;
 
 import designmode.tools.ALog;
+import factory.FactoryInterfaces.ProductInterface;
+import factory.FactoryInterfaces.ProductInterfaceAF1;
+import factory.FactoryInterfaces.ProductInterfaceAF2;
+import factory.FactoryProducts.ConcreteProduct;
+import factory.FactoryProducts.ConcreteProductAF1;
+import factory.FactoryProducts.ConcreteProductAF2;
+import factory.FactoryProducts.ConcreteProductF1;
+import factory.FactoryProducts.ConcreteProductF2;
+import factory.FactoryProducts.ConcreteProductS1;
+import factory.FactoryProducts.ConcreteProductS2;
 
 public class FactoryTest {
 	//简单工厂
@@ -22,7 +32,6 @@ public class FactoryTest {
 	}
 	
 	//工厂方法
-	//
 	abstract class Factory{
 		public abstract ProductInterface CreateProduct(String name,float cost);
 	}
@@ -92,30 +101,31 @@ public class FactoryTest {
 	public FactoryTest(){
 		//简单工厂
 		ALog.Log("简单工厂");
-		SimpleFactory mSimpleFactory=new SimpleFactory();
 		ConcreteProduct mProduct = null;
+		SimpleFactory mSimpleFactory=new SimpleFactory();
 		mProduct = mSimpleFactory.CreateProduct("1");
 		mProduct.show();
 		mProduct = mSimpleFactory.CreateProduct("2");
 		mProduct.show();		
 		//工厂模式
 		ALog.Log("工厂模式");
+		ProductInterface mProductInterface = null;
 		ConcreteFactoryF1 mConcreteFactoryF1=new ConcreteFactoryF1();
-		ConcreteFactoryF2 mConcreteFactoryF2=new ConcreteFactoryF2();
-		ProductInterface mProductInterface = mConcreteFactoryF1.CreateProduct("ConcreteFactoryF1_ConcreteProductF1_ID:0x001",1.6f);
+		mProductInterface = mConcreteFactoryF1.CreateProduct("ConcreteFactoryF1_ConcreteProductF1_ID:0x001",1.6f);
 		mProductInterface.show();
+		ConcreteFactoryF2 mConcreteFactoryF2=new ConcreteFactoryF2();
 		mProductInterface = mConcreteFactoryF2.CreateProduct("ConcreteFactoryF2_ConcreteProductF1_ID:0x002",1.8f);
 		mProductInterface.show();		
 		//抽象工厂
 		ALog.Log("抽象工厂");
-		ProductInterfaceAF1 mProductInterfaceA1;
-		ProductInterfaceAF2 mProductInterfaceA2;
+		ProductInterfaceAF1 mProductInterfaceA1 = null;
+		ProductInterfaceAF2 mProductInterfaceA2 = null;
 		ConcreteFactoryAF1 mConcreteFactoryAF1=new ConcreteFactoryAF1();
-		ConcreteFactoryAF2 mConcreteFactoryAF2=new ConcreteFactoryAF2();
 		mProductInterfaceA1 = mConcreteFactoryAF1.createProductAF1("ConcreteFactoryAF1_ConcreteProductAF1_ID:0x011",1.6f);
 		mProductInterfaceA2 = mConcreteFactoryAF1.createProductAF2("ConcreteFactoryAF1_ConcreteProductAF2_ID:0x021",2.5f);
 		mProductInterfaceA1.show();
 		mProductInterfaceA2.show();
+		ConcreteFactoryAF2 mConcreteFactoryAF2=new ConcreteFactoryAF2();
 		mProductInterfaceA1 = mConcreteFactoryAF2.createProductAF1("ConcreteFactoryAF2_ConcreteProductAF1_ID:0x012",1.8f);
 		mProductInterfaceA2 = mConcreteFactoryAF2.createProductAF2("ConcreteFactoryAF2_ConcreteProductAF2_ID:0x022",2.3f);
 		mProductInterfaceA1.show();
